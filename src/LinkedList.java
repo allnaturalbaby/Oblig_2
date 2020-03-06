@@ -1,25 +1,34 @@
 public class LinkedList {
     Node head;
 
-    static void append(int new_data, LinkedList list) //Setter inn en ny node på slutten av listen, punkt 2
-    {
+    static void mergeSort(LinkedList first, LinkedList second, LinkedList target) {
+        while (first.head != null && second.head != null) {
+            if (first.head.data > second.head.data) {
+                append(second.head.data, target);
+                second.head = second.head.next;
+            } else {
+                append(first.head.data, target);
+                first.head = first.head.next;
+            }
+            if(first.head == null) {
+                append(second.head.data, target);
+                second.head = second.head.next;
+            }
+        }
+    }
+
+    static void append(int new_data, LinkedList list) {
         Node new_node = new Node(new_data);
-
-        if(list.head == null)
-        {
-            list.head = new Node(new_data);
-            return;
-        }
-
-        new_node.next = null;
-
         Node last = list.head;
-        while (last.next != null)
-        {
-            last = last.next;
-        }
 
-        last.next = new_node;
+        if(list.head == null) {
+            list.head = new_node;
+        } else {
+            while (last.next != null) {
+                last = last.next;
+            }
+            last.next = new_node;
+        }
     }
 
     public static void printLinkedList(LinkedList list) {   //Print lista
