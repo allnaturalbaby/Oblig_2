@@ -4,10 +4,12 @@ public class LinkedList {
     static void append(int new_data, LinkedList list) //Setter inn en ny node på slutten av listen
     {
         Node new_node = new Node(new_data);
+        Node temp = list.head;
 
-        if (list.head == null) {
-            list.head = new_node;
+        while(temp.next != null) {
+            temp = temp.next;
         }
+        temp.next = new_node;
     }
 
     public static void printLinkedList(LinkedList list) {   //Print lista
