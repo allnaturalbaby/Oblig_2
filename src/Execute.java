@@ -11,7 +11,7 @@ public class Execute {
         Linkedlist.printLinkedList(list);
 
         System.out.println("woah");
-
+        System.out.println("shalabais");
         Linkedlist.printLinkedList(list2);
     }
 }
