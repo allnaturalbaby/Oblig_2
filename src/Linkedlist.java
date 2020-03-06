@@ -1,17 +1,6 @@
 public class Linkedlist {
     Node head;
 
-    static class Node   //Linked list Node
-    {
-        int data;
-        Node next;
-
-        Node(int d) {
-            data = d;
-            next = null;
-        }
-    }
-
     static void append(int new_data, Linkedlist list) //Setter inn en ny node på slutten av listen
     {
         Node new_node = new Node(new_data);
