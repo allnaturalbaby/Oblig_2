@@ -1,16 +1,16 @@
-public class Linkedlist {
+public class LinkedList {
     Node head;
 
-    static void append(int new_data, Linkedlist list) //Setter inn en ny node på slutten av listen
+    static void append(int new_data, LinkedList list) //Setter inn en ny node på slutten av listen
     {
         Node new_node = new Node(new_data);
 
         if (list.head == null) {
-            list.head = new Node(new_data);
+            list.head = new_node;
         }
     }
 
-    public static void printLinkedList(Linkedlist list) {   //Print lista
+    public static void printLinkedList(LinkedList list) {   //Print lista
         Node print = list.head;
         System.out.println("\t~Listen~");
         if(print == null) {

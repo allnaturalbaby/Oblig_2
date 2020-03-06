@@ -2,16 +2,16 @@ public class Execute {
     public static void main (String [] args){
         System.out.println("Dick");
 
-        Linkedlist list = new Linkedlist();
-        Linkedlist list2 = new Linkedlist();
+        LinkedList list = new LinkedList();
+        LinkedList list2 = new LinkedList();
 
-        Linkedlist.append(1, list);
-        Linkedlist.append(2, list2);
+        LinkedList.append(1, list);
+        LinkedList.append(2, list2);
 
-        Linkedlist.printLinkedList(list);
+        LinkedList.printLinkedList(list);
 
         System.out.println("woah");
         System.out.println("shalabais123123");
-        Linkedlist.printLinkedList(list2);
+        LinkedList.printLinkedList(list2);
     }
 }
