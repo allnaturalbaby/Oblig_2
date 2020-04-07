@@ -1,17 +1,21 @@
 public class MergeSort {
-    static void mergeSort(LinkedList first, LinkedList second, LinkedList target) {
-        while (first.head != null && second.head != null) {
-            if (first.head.data > second.head.data) {
-                LinkedList.append(second.head.data, target);
-                second.head = second.head.next;
+    static void mS(LinkedList f, LinkedList s, LinkedList t) {
+        while(f.head != null && s.head != null) {
+            if(f.head.data <= s.head.data) {
+                LinkedList.append(f.head.data, t);
+                f.head = f.head.next;
             } else {
-                LinkedList.append(first.head.data, target);
-                first.head = first.head.next;
+                LinkedList.append(s.head.data, t);
+                s.head = s.head.next;
             }
-            if(first.head == null) {
-                LinkedList.append(second.head.data, target);
-                second.head = second.head.next;
-            }
+        }
+        while(f.head != null) {
+            LinkedList.append(f.head.data, t);
+            f.head = f.head.next;
+        }
+        while(s.head != null) {
+            LinkedList.append(s.head.data, t);
+            s.head = s.head.next;
         }
     }
 }

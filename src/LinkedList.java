@@ -1,18 +1,21 @@
 public class LinkedList {
     Node head;
 
-    static void append(int new_data, LinkedList list) {
-        Node new_node = new Node(new_data);
-        Node last = list.head;
+    //adds a node to the end of the list
+    static void append(int n, LinkedList t) {
+        Node new_node = new Node(n);
+        Node last = t.head;
 
-        if(list.head == null) {
-            list.head = new_node;
-        } else {
-            while (last.next != null) {
-                last = last.next;
-            }
-            last.next = new_node;
+        if(t.head == null) {
+            t.head = new_node;
+            return;
         }
+        new_node.next = null;
+
+        while (last.next != null) {
+            last = last.next;
+        }
+        last.next = new_node;
     }
 
     public static void printLinkedList(LinkedList list) {   //Print lista
