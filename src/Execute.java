@@ -22,7 +22,7 @@ public class Execute extends LinkedList {
 
         LinkedList targetList = new LinkedList();
         //targetList.head = null;
-        mergeSort(list, list2, targetList);
+        MergeSort.mergeSort(list, list2, targetList);
         printLinkedList(targetList);
     }
 }

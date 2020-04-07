@@ -1,22 +1,6 @@
 public class LinkedList {
     Node head;
 
-    static void mergeSort(LinkedList first, LinkedList second, LinkedList target) {
-        while (first.head != null && second.head != null) {
-            if (first.head.data > second.head.data) {
-                append(second.head.data, target);
-                second.head = second.head.next;
-            } else {
-                append(first.head.data, target);
-                first.head = first.head.next;
-            }
-            if(first.head == null) {
-                append(second.head.data, target);
-                second.head = second.head.next;
-            }
-        }
-    }
-
     static void append(int new_data, LinkedList list) {
         Node new_node = new Node(new_data);
         Node last = list.head;
